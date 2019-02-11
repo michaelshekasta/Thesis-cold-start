@@ -97,7 +97,8 @@ if __name__ == "__main__":
                                                    dense_layer_size=config_model.dense_layer_size,
                                                    exp_name=exp_name
                                                    )
-                        auc = exp.run_exp(x_train1=x_train1, x_train2=x_train2, y_train=y_train, x_test1=x_test1, x_test2=x_test2,
+                        auc = exp.run_exp(x_train1=x_train1, x_train2=x_train2, y_train=y_train, x_test1=x_test1,
+                                          x_test2=x_test2,
                                           y_test=y_test,
                                           use_cnn=config_model.use_cnn, shuffle=config_model.shuffle,
                                           validation_split=config_model.validation_split

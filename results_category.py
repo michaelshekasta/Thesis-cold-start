@@ -41,5 +41,5 @@ with io.open("auc results category.csv", 'w', encoding='utf8') as fw:
             auc_integrated = -1
 
         fw.write(u"%s,%s,%s,%s\n" % (
-            category,str(auc_baseline), str(auc_textmodel),
+            category, str(auc_baseline), str(auc_textmodel),
             str(auc_integrated)))

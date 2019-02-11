@@ -22,7 +22,7 @@ with io.open("auc results_thesis_2.csv", 'w', encoding='utf8') as fw:
                              u'Möbel & Einrichtung', u'Mode', u'Multimedia & Technik', u'Schönheit & Pflege',
                              u'Sport', u'all']:  # * is all
                 if category == u'all':
-                    cat_cond = (df[u'category'] <> u'all')
+                    cat_cond = (df[u'category'] != u'all')
                 else:
                     cat_cond = (df[u'category'] == category)
                 for length in range(2, 12):  # 11 is no filter
@@ -37,7 +37,7 @@ with io.open("auc results_thesis_2.csv", 'w', encoding='utf8') as fw:
                             new_items_cond = (df[u'cold_start_items'] > -1)
                         else:
                             new_items_cond = (df[u'cold_start_items'] == new_items)
-                        if new_items <> u'all' and length <> u'all' and new_items > length:
+                        if new_items != u'all' and length != u'all' and new_items > length:
                             continue
                         a = df.loc[(cat_cond) & (length_cond) & (new_items_cond)]
                         y_test = a.y_test.values

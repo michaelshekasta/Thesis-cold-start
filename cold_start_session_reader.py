@@ -4,6 +4,7 @@ This class wil represent exp for cold start issue
 import random
 import pandas as pd
 
+
 class ColdStartSessionReader(object):
     def __init__(self, catalog, train, test, data_out_path='data_before_encode', min_item_in_category=5,
                  precent_remove=0.2):

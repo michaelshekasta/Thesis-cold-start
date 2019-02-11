@@ -45,7 +45,8 @@ class SessionsRemoverVal(object):
 
         self.new_item_test_set = self.non_new_item_test_set.loc[self.non_new_item_test_set.sessionid.isin(
             new_items_session_id)]  # df_merge.loc[~df_merge['dayofsession'].isin(test_dates)]
-        self.non_new_item_test_set = self.non_new_item_test_set.loc[~self.non_new_item_test_set.sessionid.isin(new_items_session_id)]
+        self.non_new_item_test_set = self.non_new_item_test_set.loc[
+            ~self.non_new_item_test_set.sessionid.isin(new_items_session_id)]
         # dump to file
         self.train_new.to_csv('%s/train_new.csv' % data_file_path, sep=';')
         self.non_new_item_test_set.to_csv('%s/non_new_item_test_set.csv' % data_file_path, sep=';')

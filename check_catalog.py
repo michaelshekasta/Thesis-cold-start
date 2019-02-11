@@ -7,6 +7,7 @@ import yoochose_catalog
 
 if __name__ == "__main__":
     import sys
+
     reload(sys)
     sys.setdefaultencoding('utf-8')
     with io.open("catalog_length.csv", 'w', encoding='utf8') as fw:

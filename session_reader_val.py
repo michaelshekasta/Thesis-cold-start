@@ -77,10 +77,12 @@ class SessionReaderVal(object):
                 if len(items.difference(item_in_train)) > 0:
                     new_items_session_id.append(row.sessionid)
 
-                self.new_val_only_new_items = self.val.loc[self.val.sessionid.isin(new_items_session_id)]  # df_merge.loc[~df_merge['dayofsession'].isin(test_dates)]
+                self.new_val_only_new_items = self.val.loc[self.val.sessionid.isin(
+                    new_items_session_id)]  # df_merge.loc[~df_merge['dayofsession'].isin(test_dates)]
                 self.val = self.val.loc[~self.val.sessionid.isin(self.new_val_only_new_items)]
 
-                self.new_test_only_new_items = self.test.loc[self.test.sessionid.isin(new_items_session_id)]  # df_merge.loc[~df_merge['dayofsession'].isin(test_dates)]
+                self.new_test_only_new_items = self.test.loc[self.test.sessionid.isin(
+                    new_items_session_id)]  # df_merge.loc[~df_merge['dayofsession'].isin(test_dates)]
                 self.test = self.test.loc[~self.test.sessionid.isin(new_items_session_id)]
 
         print('training set = %s' % str(self.train.shape[0]))

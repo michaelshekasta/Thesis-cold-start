@@ -91,7 +91,8 @@ if __name__ == "__main__":
             exp = ColdStartExpVal(use_class_weight=config_model.use_class_weight, encode_mode=1,
                                   max_features=len(items) + 1, lr=config_model.lr,
                                   epochs_model=config_model.epochs_model,
-                                  batch_size=config_model.model_batch_size, embedding_size=config_model.model_embedding_size,
+                                  batch_size=config_model.model_batch_size,
+                                  embedding_size=config_model.model_embedding_size,
                                   dense_layer_size=config_model.dense_layer_size,
                                   hidden_lstm_size=config_model.hidden_size_rnn)
         auc = exp.run_exp(x_train=x_train, y_train=y_train, x_val=x_val, y_val=y_val, x_test=x_test1, y_test=y_test1,

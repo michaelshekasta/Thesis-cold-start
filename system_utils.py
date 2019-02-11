@@ -1,7 +1,7 @@
 import pickle
 
 import os
-#from HTMLParser import HTMLParser
+# from HTMLParser import HTMLParser
 
 import smtplib
 from os.path import basename
@@ -9,6 +9,7 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.utils import COMMASPACE, formatdate
+
 
 def delete_file(path):
     import os
@@ -35,8 +36,7 @@ def load_object(path):
 
 
 def send_mail_with_attach(user='shadars003@gmail.com', pwd='123456ABC', recipient='shkasta@post.bgu.ac.il',
-               subject='finish expirement', body='finish well', files=['m.txt']):
-
+                          subject='finish expirement', body='finish well', files=['m.txt']):
     gmail_pwd = pwd
     msg = MIMEMultipart()
     msg['From'] = user
@@ -68,6 +68,7 @@ def send_mail_with_attach(user='shadars003@gmail.com', pwd='123456ABC', recipien
         print('successfully sent the mail')
     except:
         print("failed to send mail")
+
 
 def send_email(user='shadars003@gmail.com', pwd='123456ABC', recipient='shkasta@post.bgu.ac.il',
                subject='finish expirement', body='finish well'):
@@ -126,17 +127,21 @@ def redirect_stdout(path):
         pass
     sys.stdout = open(path, 'w')
 
+
 def stdout_flush():
     import sys
     sys.stdout.flush()
+
 
 def change_work_dir(path):
     import os
     os.chdir(path)
 
+
 def create_dir(path):
     if not os.path.exists(path):
         os.makedirs(path)
+
 
 # class HTMLCleaner(HTMLParser):
 #     container = ""
@@ -154,4 +159,3 @@ def stripHTML(html):
     # for i in range(1, 10):
     #     result = result.replace("  ", " ")
     # return result
-

@@ -43,8 +43,8 @@ if __name__ == "__main__":
             config_name = 'no_cold_start'
 
             for use_item_emb in [False, True]:
-            # for use_item_emb in [True]:
-            # for use_item_emb in [False]:
+                # for use_item_emb in [True]:
+                # for use_item_emb in [False]:
                 model_name = 'baseline'
                 if use_item_emb:
                     model_name = 'ourmodel'

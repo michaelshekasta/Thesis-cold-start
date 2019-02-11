@@ -139,7 +139,7 @@ class EncodeReaderExt(object):
         for session in seq_session_train:
             x = []
             for item in session:
-                x += [word2ind.get(int(item),0)]
+                x += [word2ind.get(int(item), 0)]
             temp += [x]
             if count >= batch_size:
                 count = 0

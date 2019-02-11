@@ -52,7 +52,7 @@ if __name__ == "__main__":
             # for percent_to_remove in [0.9, 0.95, 0.995]:
             # for percent_to_remove in [0.1]:
             # for use_item_emb in [False, True]:
-                # for use_item_emb in [True]:
+            # for use_item_emb in [True]:
             model_name = 'integrated'
             print('running exps of our model:%s' % str("integrated"))
             # exp_name = '%s_%s_%s_%s' % (

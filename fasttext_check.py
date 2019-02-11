@@ -11,7 +11,8 @@ import yoochose_catalog
 def create_files(mode):
     print('starting mode %d...' % mode)
     print('create catalog...')
-    c = yoochose_catalog.Catalog(dir_path="catalog", use_german_token=config_model.use_german_tokenizer, mode=mode, to_replace_umlauts=False, clean_words_punctuation=False)
+    c = yoochose_catalog.Catalog(dir_path="catalog", use_german_token=config_model.use_german_tokenizer, mode=mode,
+                                 to_replace_umlauts=False, clean_words_punctuation=False)
 
     words_wrote_in_catalog = set()
     words = c.words
@@ -32,9 +33,9 @@ def create_files(mode):
                     words_wrote_in_catalog.add(line_split[0])
     print(set(words).difference(words_wrote_in_catalog))
     message = "mode = %d , lines wrote = %d, words_wrote_in_catalog = %d ,words in catalog = %d" % (
-    mode, num_line, len(words_wrote_in_catalog), len(set(words)))
+        mode, num_line, len(words_wrote_in_catalog), len(set(words)))
     print(message)
-    system_utils.send_email(subject='extract vectors',body=message)
+    system_utils.send_email(subject='extract vectors', body=message)
 
 
 # for i in range(1, 8):

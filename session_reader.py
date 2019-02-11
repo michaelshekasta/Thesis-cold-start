@@ -10,10 +10,10 @@ def buy_item_to_item(item):
 
 def read_session_actions(input_path, items_list, maxlen, minlen=None):
     data = []
-    i=0
+    i = 0
     with open(input_path) as f_reader:
         for line in f_reader:
-            i+=1
+            i += 1
             line = line.replace("\n", "").replace("\r", "")
             split_fields = line.split(" ")
             session_id = int(split_fields[0])

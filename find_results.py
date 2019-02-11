@@ -20,7 +20,7 @@ with io.open("auc results.csv", 'w', encoding='utf8') as fw:
                                  u'Möbel & Einrichtung', u'Mode', u'Multimedia & Technik', u'Schönheit & Pflege',
                                  u'Sport', u'all']:  # * is all
                     if category == u'all':
-                        cat_cond = (df[u'category'] <> u'all')
+                        cat_cond = (df[u'category'] != u'all')
                     else:
                         if onlyone:
                             cat_cond = (df[u'category'] == category)

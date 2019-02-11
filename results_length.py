@@ -45,11 +45,11 @@ with io.open("auc results length.csv", 'w', encoding='utf8') as fw:
                     except:
                         auc_integrated = -1
                     if gt_sign:
-                        sign ='>'
+                        sign = '>'
                     else:
                         sign = '<'
                     fw.write(u"%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (
-                        str(type),str(percent),
+                        str(type), str(percent),
                         str(length), str(sign), str(a[u'cold_start_items'].mean()),
-                        str(number_sample),str(number_sample_no_purchase),str(number_sample_with_purchase),
-                        str(auc_baseline), str(auc_textmodel),str(auc_integrated)))
+                        str(number_sample), str(number_sample_no_purchase), str(number_sample_with_purchase),
+                        str(auc_baseline), str(auc_textmodel), str(auc_integrated)))

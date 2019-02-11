@@ -111,8 +111,8 @@ class RegularExpIntegreted(object):
             model = Model(inputs=[input1, input2], outputs=dense2)
             model.compile(loss='binary_crossentropy',
                           optimizer=keras.optimizers.Adam(lr=self.lr, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0
-                          # optimizer=keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0
-                                                             )
+                                                          # optimizer=keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0
+                                                          )
                           , metrics=['accuracy'])
             print("models summary:")
             print(model.summary())

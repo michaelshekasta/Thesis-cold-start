@@ -13,6 +13,7 @@ import numpy as np
 
 michael_test = 0
 
+
 class printTest(Callback):
     def __init__(self, x_test1, y_test1, x_test2, y_test2, epoch=0):
         Callback.__init__(self)

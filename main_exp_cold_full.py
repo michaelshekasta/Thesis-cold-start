@@ -142,7 +142,8 @@ if __name__ == "__main__":
                                                    )
                             else:
                                 exp = ColdStartExp(use_class_weight=config_model.use_class_weight, encode_mode=1,
-                                                   max_features=len(encode_session1.items_in_train) + 1, lr=config_model.lr,
+                                                   max_features=len(encode_session1.items_in_train) + 1,
+                                                   lr=config_model.lr,
                                                    epochs_model=config_model.epochs_model,
                                                    batch_size=config_model.model_batch_size,
                                                    embedding_size=config_model.model_embedding_size,

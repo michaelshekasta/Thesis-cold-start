@@ -163,8 +163,7 @@ class ColdStartExp(object):
                 model.save("%s/models.h5" % self.model_path)
                 print('models saved')
             except:
-                print
-                'cant save the models'
+                print('cant save the models')
         print('testing..')
         return (self.evalute_model(model, x_test, y_test), self.evalute_model(model, x_test_cold, y_test_cold))
 
